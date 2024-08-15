@@ -13,6 +13,10 @@ composer require lordbecvold/becwork-utils
     - [setCookie](#setcookie)
     - [getCookie](#getcookie)
     - [deleteCookie](#deletecookie)
+  - [FilesystemUtil](#filesystemutil)
+     - [getFilesList](#getfileslist)
+     - [isFileExecutable](#isfileexecutable)
+     - [getFileContent](#getfilecontent)
   - [JsonUtil](#jsonutil)
     - [getJson](#getjson)
     - [fetchData](#fetchdata)
@@ -65,6 +69,27 @@ The `CookieUtil` class provides methods for working with cookies.
 - **Description**: Deletes a cookie by setting its expiration time to the past.
 - **Parameters**:
   - `name`: The name of the cookie.
+
+## FilesystemUtil
+The `FilesystemUtil` class provides methods for working with the filesystem.
+
+#### getFilesList
+- **Description**: Returns a list of files and directories in the specified path.
+- **Parameters**:
+  - `path`: The path to list files and directories.
+- **Returns**: An array of arrays containing information about the files and directories.
+
+#### isFileExecutable
+- **Description**: Checks if the file is executable.
+- **Parameters**:
+  - `path`: The path to the file.
+- **Returns**: `true` if the file is executable, `false` otherwise.
+
+#### getFileContent
+- **Description**: Returns the contents of a file.
+- **Parameters**:
+  - `path`: The path to the file.
+- **Returns**: The file content or `null` if the file does not exist.
 
 ### JsonUtil
 The `JsonUtil` class provides functions for retrieving and decoding JSON data from a file or URL.
