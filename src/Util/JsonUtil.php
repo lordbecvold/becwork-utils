@@ -2,7 +2,7 @@
 
 namespace BecworkUtils\Util;
 
-use BecworkUtils\Exception\JsonUtilException;
+use Exception;
 
 /**
  * Class JsonUtil
@@ -61,13 +61,13 @@ class JsonUtil
             $data = file_get_contents($target, false, $context);
 
             if ($data === false) {
-                throw new JsonUtilException('Failed to retrieve data from ' . $target);
+                throw new Exception('Failed to retrieve data from ' . $target);
             }
 
             // return data
             return $data;
         } catch (\Exception $e) {
-            throw new JsonUtilException('Error fetching data from ' . $target . ': ' . $e->getMessage());
+            throw new Exception('Error fetching data from ' . $target . ': ' . $e->getMessage());
         }
     }
 
@@ -86,7 +86,7 @@ class JsonUtil
 
         // check for errors
         if (json_last_error() !== JSON_ERROR_NONE) {
-            throw new JsonUtilException('Error decoding JSON data from ' . $target . ': ' . json_last_error_msg());
+            throw new Exception('Error decoding JSON data from ' . $target . ': ' . json_last_error_msg());
         }
 
         // return decoded data

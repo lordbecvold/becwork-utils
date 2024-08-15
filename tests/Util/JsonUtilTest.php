@@ -2,9 +2,9 @@
 
 namespace BecworkUtils\Tests\Util;
 
+use Exception;
 use PHPUnit\Framework\TestCase;
 use BecworkUtils\Util\JsonUtil;
-use BecworkUtils\Exception\JsonUtilException;
 
 /**
  * Class JsonUtilTest
@@ -91,12 +91,12 @@ class JsonUtilTest extends TestCase
         ]);
 
         // expect exception
-        $this->expectException(JsonUtilException::class);
+        $this->expectException(Exception::class);
         $this->expectExceptionMessage('Failed to retrieve data from http://example.com');
 
         // mock fetchData to throw JsonUtilException
         $mock = $this->getMockBuilder(JsonUtil::class)->onlyMethods(['fetchData'])->getMock();
-        $mock->method('fetchData')->willThrowException(new JsonUtilException('Failed to retrieve data from http://example.com'));
+        $mock->method('fetchData')->willThrowException(new Exception('Failed to retrieve data from http://example.com'));
 
         // fetch data
         $mock->fetchData('http://example.com', $context);
@@ -127,12 +127,12 @@ class JsonUtilTest extends TestCase
     public function testDecodeJsonFailure(): void
     {
         // expect exception
-        $this->expectException(JsonUtilException::class);
+        $this->expectException(Exception::class);
         $this->expectExceptionMessage('Error decoding JSON data from http://example.com: Syntax error');
 
         // mock decodeJson to throw JsonUtilException
         $mock = $this->getMockBuilder(JsonUtil::class)->onlyMethods(['decodeJson'])->getMock();
-        $mock->method('decodeJson')->willThrowException(new JsonUtilException('Error decoding JSON data from http://example.com: Syntax error'));
+        $mock->method('decodeJson')->willThrowException(new Exception('Error decoding JSON data from http://example.com: Syntax error'));
 
         // call json decode method
         $mock->decodeJson('invalid json', 'http://example.com');
