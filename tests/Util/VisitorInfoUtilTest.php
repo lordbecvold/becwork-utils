@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Tests\Util\VisitorInfoUtil;
+namespace BecworkUtils\Tests\Util;
 
 use PHPUnit\Framework\TestCase;
 use BecworkUtils\Util\VisitorInfoUtil;

@@ -1,6 +1,6 @@
 <?php
 
-namespace BecworkUtils\Util;
+namespace BecworkUtils\Tests\Util;
 
 use PHPUnit\Framework\TestCase;
 use BecworkUtils\Util\CookieUtil;

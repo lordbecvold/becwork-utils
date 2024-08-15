@@ -1,6 +1,6 @@
 <?php
 
-namespace BecworkUtils\Util\Tests;
+namespace BecworkUtils\Tests\Util;
 
 use Exception;
 use PHPUnit\Framework\TestCase;
