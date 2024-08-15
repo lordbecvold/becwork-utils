@@ -13,3 +13,10 @@ php ./vendor/bin/phpcs
 # test code with phpstan analyzer
 yellow_echo 'PHPSTAN: testing...'
 php ./vendor/bin/phpstan -vvv
+
+# run unit tests
+yellow_echo 'PHPUNIT: testing...'
+php ./vendor/bin/phpunit
+
+# print info message
+yellow_echo 'Project tests completed.'
