@@ -1,6 +1,7 @@
 # <h1 align="center">Becwork Utils</h1>
 ### <p align="center">Useful utils for web applications</p>
 <p align="center">
+    <a href="https://github.com/lordbecvold/becwork-utils/blob/main/DOC.MD" target="_blank">Documentation</a> |
     <a href="https://github.com/lordbecvold/becwork-utils/blob/main/LICENSE" target="_blank">License</a> |
     <a href="https://becvar.xyz" target="_blank">Author</a>
 </p>
