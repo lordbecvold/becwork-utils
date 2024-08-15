@@ -6,9 +6,9 @@ use BecworkUtils\Exception\JsonUtilException;
 
 /**
  * Class JsonUtil
- * 
+ *
  * JsonUtil provides functions for retrieving JSON data from source target
- * 
+ *
  * @package BecworkUtils\Util
  */
 class JsonUtil
@@ -21,9 +21,9 @@ class JsonUtil
      * @param string $userAgent The user agent to use
      * @param int $timeout The timeout in seconds
      *
-     * @return array<mixed>|null The decoded JSON data as an associative array or null on failure
+     * @return mixed The decoded JSON data
      */
-    public function getJson(string $target, string $method = 'GET', string $userAgent = 'becwork-utils', int $timeout = 5): ?array
+    public function getJson(string $target, string $method = 'GET', string $userAgent = 'becwork-utils', int $timeout = 5): mixed
     {
         // create request context
         $context = stream_context_create([
@@ -77,9 +77,9 @@ class JsonUtil
      * @param string $data The JSON data to decode
      * @param string $target The file path or URL
      *
-     * @return array<mixed> The decoded JSON data as an associative array
+     * @return mixed The decoded JSON data
      */
-    public function decodeJson(string $data, string $target): array
+    public function decodeJson(string $data, string $target): mixed
     {
         // decode json
         $decodedData = json_decode($data, true);
