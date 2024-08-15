@@ -1,5 +1,5 @@
 # Becwork Utils Library
-A utility library for handling cookies, JSON data, sessions, site information, and security in PHP. This documentation provides detailed information about the available classes and their respective methods.
+A utility library for handling cookies, JSON data, sessions, site information, and security in PHP. This documentation provides detailed information about the available classes and their methods.
 
 ## Installation
 1. Use [Composer](http://getcomposer.org) to install becwork-utils:
