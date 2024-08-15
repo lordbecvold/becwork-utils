@@ -1,0 +1,32 @@
+# test code with phpstan
+name: PHPStan
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+
+jobs:
+  phpstan:
+    name: PHPStan analyse
+    runs-on: ubuntu-latest
+
+    steps:
+    # checkout code
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    # setup PHP
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: 8.3
+
+    # install project dependencies
+    - name: Install dependencies
+      run: composer install --no-interaction --no-progress --no-suggest
+
+    # run PHPStan process
+    - name: Run PHPStan
+      run: ./vendor/bin/phpstan --configuration phpstan.neon -vvv
