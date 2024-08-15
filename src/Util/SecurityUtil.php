@@ -7,7 +7,7 @@ namespace BecworkUtils\Util;
  *
  * The utility class for security
  *
- * @package App\Util
+ * @package BecworkUtils\Util
  */
 class SecurityUtil
 {

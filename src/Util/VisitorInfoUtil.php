@@ -7,7 +7,7 @@ namespace BecworkUtils\Util;
  *
  * VisitorInfoUtil provides methods to get information about visitors
  *
- * @package App\Util
+ * @package BecworkUtils\Util
  */
 class VisitorInfoUtil
 {
