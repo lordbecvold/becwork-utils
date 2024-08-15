@@ -13,11 +13,6 @@ use BecworkUtils\Exception\JsonUtilException;
  */
 class JsonUtil
 {
-    public function test(): void
-    {
-        echo 'test';
-    }
-
     /**
      * Get JSON data from a file or URL
      *
