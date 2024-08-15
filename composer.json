@@ -1,0 +1,20 @@
+{
+    "name": "lordbecvold/becwork-utils",
+    "veresion": "1.0",
+    "description": "Useful utils for web applications",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "BecworkUtils\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Lukáš Bečvář",
+            "email": "lukas@becvar.xyz"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
