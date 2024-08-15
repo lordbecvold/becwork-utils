@@ -27,6 +27,23 @@ composer require lordbecvold/becwork-utils
     - [verifyPassword](#verifypassword)
     - [encryptAes](#encryptaes)
     - [decryptAes](#decryptaes)
+  - [ServerUtil](#serverutil)
+    - [getServerName](#getservername)
+    - [getServerSoftware](#getserversoftware)
+    - [getHostUptime](#gethostuptime)
+    - [getCpuUsage](#getcpuusage)
+    - [getRamUsage](#getramusage)
+    - [getRamUsagePercentage](#getramusagepercentage)
+    - [getDiskUsage](#getdiskusage)
+    - [getDriveUsagePercentage](#getdriveusagepercentage)
+    - [getWebUsername](#getwebusername)
+    - [isSystemLinux](#issystemlinux)
+    - [isWebUserSudo](#iswebusersudo)
+    - [getSystemInfo](#getsysteminfo)
+    - [isServiceInstalled](#isserviceinstalled)
+    - [getNotInstalledRequirements](#getnotinstalledsoftware)
+    - [getProcessList](#getprocesslist)
+    - [getDiagnosticData](#getdiagnosticdata)
   - [SessionUtil](#sessionutil)
     - [startSession](#startsession)
     - [destroySession](#destroysession)
@@ -155,6 +172,77 @@ The `SecurityUtil` class provides utility functions for handling security-relate
   - `key`: The key to use for decryption.
   - `method`: The encryption method (default: 'AES-128-CBC').
 - **Returns**: The decrypted string or `null` on error.
+
+### ServerUtil
+The `ServerUtil` class provides methods for getting server information.
+
+#### getServerName
+- **Description**: Gets the server name.
+- **Returns**: The server name.
+
+#### getServerSoftware
+- **Description**: Gets the server software.
+- **Returns**: The server software.
+
+#### getHostUptime
+- **Description**: Gets the host uptime.
+- **Returns**: The formatted host uptime.
+
+#### getCpuUsage
+- **Description**: Gets the CPU usage percentage.
+- **Returns**: The CPU usage percentage.
+
+#### getRamUsage
+- **Description**: Gets the RAM usage information.
+- **Returns**: An array containing RAM usage information.
+
+#### getRamUsagePercentage
+- **Description**: Gets the RAM usage percentage.
+- **Returns**: The RAM usage percentage.
+
+#### getDiskUsage
+- **Description**: Gets the disk usage.
+- **Returns**: The disk usage or `null` on error.
+
+#### getDriveUsagePercentage
+- **Description**: Gets the drive usage percentage.
+- **Returns**: The drive usage percentage or `null` on error.
+
+#### getWebUsername
+- **Description**: Gets the web username.
+- **Returns**: The web username or `null` on error.
+
+#### isSystemLinux
+- **Description**: Checks if the system is running Linux.
+- **Returns**: `true` if the system is running Linux, `false` otherwise.
+
+#### isWebUserSudo
+- **Description**: Checks if the web user has sudo privileges.
+- **Returns**: `true` if the web user has sudo privileges, `false` otherwise.
+
+#### getSystemInfo
+- **Description**: Gets information about installed software packages and the Linux distribution.
+- **Returns**: An array containing information about installed software packages and the Linux distribution.
+
+#### isServiceInstalled
+- **Description**: Checks if a service is or is php extension installed.
+- **Parameters**:
+  - `serviceName`: The name of the service.
+- **Returns**: `true` if the service is installed, `false` otherwise.
+
+#### getNotInstalledRequirements
+- **Description**: Gets a list of required applications that are not installed.
+- **Parameters**:
+  - `appList`: List of required applications.
+- **Returns**: An array of applications that are not installed.
+
+#### getProcessList
+- **Description**: Gets a list of running processes.
+- **Returns**: An array of running processes.
+
+#### getDiagnosticData
+- **Description**: Gets diagnostic data.
+- **Returns**: An array containing diagnostic data.
 
 ### SessionUtil
 The `SessionUtil` class provides methods for working with sessions.
