@@ -1,6 +1,6 @@
 {
     "name": "lordbecvold/becwork-utils",
-    "veresion": "1.0",
+    "version": "1.0",
     "description": "Useful utils for web applications",
     "type": "library",
     "license": "MIT",
@@ -8,6 +8,9 @@
         "psr-4": {
             "BecworkUtils\\": "src/"
         }
+    },
+    "require": {
+        "php": ">=8.2"
     },
     "authors": [
         {
