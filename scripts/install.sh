@@ -1,4 +1,7 @@
 #!/bin/bash
 
-# installs the project dependencies
-composer install
+# install the project dependencies
+if [ ! -d 'vendor/' ]
+then
+    composer install
+fi
