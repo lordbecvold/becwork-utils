@@ -4,7 +4,7 @@ A utility library for handling cookies, JSON data, sessions, site information, a
 ## Installation
 1. Use [Composer](http://getcomposer.org) to install becwork-utils:
 ```bash
-composer require lordbecvold/becwork-utils
+composer require lukasbecvar/becwork-utils
 ```
 
 ## Table of Contents
